@@ -4,7 +4,7 @@
 
 A high-performance, asynchronous network telemetry dashboard built for internal infrastructure monitoring at **Lukman CodeCraft (LCC)**. This system acts as a real-time programmatic diagnostic weapon, polling live API endpoints, computing rolling latency distributions, tracking uptime integrity, and streaming color-coded system event sequences to a custom web console.
 
-Live Production URL: [Deploy your GitHub Pages URL here]
+Live Production URL: https://lukmancodecraft.github.io/lcc-performance-shield/
 
 ---
 
