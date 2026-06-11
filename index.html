@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC Performance Shield | Enterprise Telemetry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛰️ LCC Performance Shield</h1>
+        <p class="subtitle">Programmatic API Latency & Uptime Monitor</p>
+    </header>
+
+    <main>
+        <section class="card controls-card">
+            <h3>Target Configuration</h3>
+            <div class="control-group">
+                <label for="endpoint-selector">Select Monitor Target:</label>
+                <select id="endpoint-selector">
+                    <option value="https://open.er-api.com/v6/latest/USD">Exchange Rate API (Financial Core)</option>
+                    <option value="https://api.github.com">GitHub Public API (Developer Core)</option>
+                    <option value="https://httpbin.org/delay/1">Httpbin Delay Simulator (High Latency Test)</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button id="start-btn">Initiate Shield Tracking</button>
+                <button id="stop-btn" class="btn-danger" disabled>Halt Monitor</button>
+            </div>
+        </section>
+
+        <section class="telemetry-grid">
+            <div class="card metric-card">
+                <h4>Average Latency</h4>
+                <p id="avg-latency">0ms</p>
+            </div>
+            <div class="card metric-card">
+                <h4>Uptime Metric</h4>
+                <p id="uptime-pct">100%</p>
+            </div>
+            <div class="card metric-card">
+                <h4>Total Pings Sent</h4>
+                <p id="total-requests">0</p>
+            </div>
+        </section>
+
+        <section class="card terminal-card">
+            <h3>🖥️ Live Stream Telemetry Console</h3>
+            <div id="terminal-stream" class="terminal-box">
+                <div class="system-line">[SYSTEM] Interface initialized. Awaiting user tracking deployment sequence...</div>
+            </div>
+        </section>
+    </main>
+<script src="app.js"></script>
+</body>
+</html>
